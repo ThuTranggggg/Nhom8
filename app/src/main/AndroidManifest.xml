@@ -21,6 +21,10 @@
         </activity>
 
         <activity
+            android:name=".ui.AddRoomActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.EditRoomActivity"
             android:exported="true" />
     </application>
