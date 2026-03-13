@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/background_main">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_add_room"
+        android:textSize="20sp"
+        android:textColor="@color/primary_dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- ScrollView for form fields -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Room ID -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_room_id"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <EditText
+                android:id="@+id/edtRoomId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/hint_room_id"
+                android:background="@drawable/edit_text_bg"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary" />
+
+            <!-- Room Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_room_name"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <EditText
+                android:id="@+id/edtRoomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/hint_room_name"
+                android:background="@drawable/edit_text_bg"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary" />
+
+            <!-- Price -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_price"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <EditText
+                android:id="@+id/edtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/hint_price"
+                android:background="@drawable/edit_text_bg"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary" />
+
+            <!-- Status RadioGroup -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_status"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <RadioGroup
+                android:id="@+id/rgStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <RadioButton
+                    android:id="@+id/rbVacant"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_vacant"
+                    android:textColor="@color/text_primary"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbRented"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_rented"
+                    android:textColor="@color/text_primary" />
+            </RadioGroup>
+
+            <!-- Tenant Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tenant_name"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <EditText
+                android:id="@+id/edtTenantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/hint_tenant_name"
+                android:background="@drawable/edit_text_bg"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:enabled="false" />
+
+            <!-- Tenant Phone -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tenant_phone"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <EditText
+                android:id="@+id/edtTenantPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/hint_tenant_phone"
+                android:background="@drawable/edit_text_bg"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:enabled="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_save"
+            android:textColor="@color/white"
+            android:background="@color/primary_dark"
+            android:layout_marginEnd="@dimen/margin_small" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/text_primary"
+            android:background="@color/background_secondary"
+            android:layout_marginStart="@dimen/margin_small" />
+    </LinearLayout>
+
+</LinearLayout>

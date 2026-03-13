@@ -1,4 +1,4 @@
-package com.example.minipro;
+package com.example.miniapp.ui;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -10,8 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.minipro.adapter.RoomAdapter;
-import com.example.minipro.model.Room;
+import com.example.miniapp.R;
+import com.example.miniapp.adapter.RoomAdapter;
+import com.example.miniapp.model.Room;
 
 import java.util.ArrayList;
 import java.util.List;
