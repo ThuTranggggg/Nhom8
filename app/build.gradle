@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace 'com.example.minipro'
+    namespace 'com.example.miniapp'
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId "com.example.minipro"
+        applicationId "com.example.miniapp"
         minSdk 24
         targetSdk 36
         versionCode 1

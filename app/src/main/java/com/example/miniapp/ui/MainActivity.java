@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements RoomAdapter.OnIte
         roomList.add(new Room("P004", "Phòng B201", 3500000, true, "Trần Thị B", "0987654321"));
         
         // Setup RecyclerView
-        adapter = new RoomAdapter(this, roomList, this);
+        adapter = new RoomAdapter(roomList, this, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements RoomAdapter.OnIte
     }
     
     @Override
-    public void onEditClick(int position) {
+    public void onEdit(int position) {
         Room room = roomList.get(position);
         Intent intent = new Intent(MainActivity.this, EditRoomActivity.class);
         intent.putExtra("room", room);
@@ -65,17 +65,17 @@ public class MainActivity extends AppCompatActivity implements RoomAdapter.OnIte
     }
     
     @Override
-    public void onDeleteClick(int position) {
+    public void onDelete(int position) {
         Room room = roomList.get(position);
         new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.confirm_delete))
-                .setMessage(getString(R.string.confirm_delete_message))
-                .setPositiveButton(getString(R.string.yes), (dialog, which) -> {
+                .setTitle(getString(R.string.dialog_delete_title))
+                .setMessage(getString(R.string.dialog_delete_message))
+                .setPositiveButton(getString(R.string.dialog_yes), (dialog, which) -> {
                     roomList.remove(position);
                     adapter.notifyItemRemoved(position);
                     Toast.makeText(MainActivity.this, getString(R.string.success_deleted), Toast.LENGTH_SHORT).show();
                 })
-                .setNegativeButton(getString(R.string.no), null)
+                .setNegativeButton(getString(R.string.dialog_no), null)
                 .show();
     }
     

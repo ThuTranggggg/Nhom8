@@ -38,14 +38,14 @@ public class EditRoomActivity extends AppCompatActivity {
         }
         
         // Initialize views
-        edtRoomId = findViewById(R.id.edtRoomId);
-        edtRoomName = findViewById(R.id.edtRoomName);
-        edtPrice = findViewById(R.id.edtPrice);
-        rgStatus = findViewById(R.id.rgStatus);
-        edtTenantName = findViewById(R.id.edtTenantName);
-        edtTenantPhone = findViewById(R.id.edtTenantPhone);
-        btnUpdate = findViewById(R.id.btnUpdate);
-        btnCancel = findViewById(R.id.btnCancel);
+        edtRoomId = findViewById(R.id.et_room_id);
+        edtRoomName = findViewById(R.id.et_room_name);
+        edtPrice = findViewById(R.id.et_room_price);
+        rgStatus = findViewById(R.id.rg_status);
+        edtTenantName = findViewById(R.id.et_tenant_name);
+        edtTenantPhone = findViewById(R.id.et_tenant_phone);
+        btnUpdate = findViewById(R.id.btn_update);
+        btnCancel = findViewById(R.id.btn_cancel);
         
         // Pre-fill form with room data
         edtRoomId.setText(room.getId());
@@ -54,18 +54,18 @@ public class EditRoomActivity extends AppCompatActivity {
         edtPrice.setText(String.valueOf(room.getPrice()));
         
         if (room.isRented()) {
-            rgStatus.check(R.id.rbRented);
+            rgStatus.check(R.id.rb_rented);
             edtTenantName.setText(room.getTenantName());
             edtTenantPhone.setText(room.getTenantPhone());
         } else {
-            rgStatus.check(R.id.rbVacant);
+            rgStatus.check(R.id.rb_available);
             edtTenantName.setText("");
             edtTenantPhone.setText("");
         }
         
         // Handle status change to show/hide tenant fields
         rgStatus.setOnCheckedChangeListener((group, checkedId) -> {
-            boolean isRented = checkedId == R.id.rbRented;
+            boolean isRented = checkedId == R.id.rb_rented;
             edtTenantName.setEnabled(isRented);
             edtTenantPhone.setEnabled(isRented);
             if (!isRented) {
