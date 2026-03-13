@@ -1,3 +1,44 @@
 <resources>
-    <string name="app_name">MiniPro</string>
+    <string name="app_name">Room Rental Management</string>
+    
+    <!-- MainActivity -->
+    <string name="title_room_list">Danh sách phòng trọ</string>
+    <string name="btn_add_room">Thêm phòng</string>
+    <string name="empty_list">Chưa có phòng nào</string>
+    
+    <!-- AddRoomActivity / EditRoomActivity -->
+    <string name="title_add_room">Thêm phòng mới</string>
+    <string name="title_edit_room">Sửa thông tin phòng</string>
+    <string name="hint_room_id">Mã phòng (P001, P002, ...)</string>
+    <string name="hint_room_name">Tên phòng</string>
+    <string name="hint_room_price">Giá thuê/tháng (VND)</string>
+    <string name="hint_tenant_name">Tên người thuê</string>
+    <string name="hint_tenant_phone">Số điện thoại</string>
+    <string name="label_status">Tình trạng</string>
+    <string name="status_available">Còn trống</string>
+    <string name="status_rented">Đã thuê</string>
+    <string name="btn_save">Lưu</string>
+    <string name="btn_update">Cập nhật</string>
+    <string name="btn_cancel">Hủy</string>
+    
+    <!-- RoomAdapter / Item -->
+    <string name="label_price">Giá:</string>
+    <string name="label_tenant">Người thuê:</string>
+    <string name="label_phone">SĐT:</string>
+    <string name="btn_edit">Sửa</string>
+    <string name="btn_delete">Xóa</string>
+    
+    <!-- Dialog -->
+    <string name="dialog_delete_title">Xác nhận xóa</string>
+    <string name="dialog_delete_message">Bạn chắc chắn muốn xóa phòng này?</string>
+    <string name="dialog_yes">Có</string>
+    <string name="dialog_no">Không</string>
+    
+    <!-- Validation -->
+    <string name="error_empty_field">Không được để trống</string>
+    <string name="error_invalid_price">Giá phải là số dương</string>
+    <string name="error_invalid_phone">Số điện thoại không hợp lệ</string>
+    <string name="success_added">Thêm phòng thành công</string>
+    <string name="success_updated">Cập nhật phòng thành công</string>
+    <string name="success_deleted">Xóa phòng thành công</string>
 </resources>
